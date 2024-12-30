@@ -6,4 +6,4 @@
 
 # ЗАДАЧА 29-4
 
-answer = df.groupby('user_id').agg({})
+answer = df.groupby('user_id').agg({'revenue': ['sum']})
