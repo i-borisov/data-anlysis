@@ -1,4 +1,4 @@
--- ЗАДАЧА 29-1
+-- ЗАДАЧА 28-1
 
 SELECT
     program_id,
@@ -10,7 +10,7 @@ ORDER BY orders_count DESC
 LIMIT 5;
 
 
--- ЗАДАЧА 29-2
+-- ЗАДАЧА 28-2
 
 SELECT
     program_id,
@@ -20,7 +20,7 @@ WHERE state = 'success'
 GROUP BY program_id;
 
 
--- ЗАДАЧА 29-3
+-- ЗАДАЧА 28-3
 
 WITH analytics AS (
     SELECT DISTINCT id
@@ -36,7 +36,7 @@ GROUP BY program_id
 HAVING SUM(order_sum) >= 1000000;
 
 
--- ЗАДАЧА 29-4
+-- ЗАДАЧА 28-4
 
 SELECT DISTINCT
     user_id,
@@ -45,7 +45,7 @@ FROM orders
 WHERE sate = 'success';
 
 
--- ЗАДАЧА 29-5
+-- ЗАДАЧА 28-5
 
 SELECT DISTINCT
     user_id,
@@ -54,7 +54,7 @@ FROM orders
 WHERE sate = 'success';
 
 
--- ЗАДАЧА 29-6
+-- ЗАДАЧА 28-6
 
 WITH tmp AS (
     SELECT DISTINCT
