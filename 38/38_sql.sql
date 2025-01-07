@@ -1,0 +1,51 @@
+-- ЗАДАЧА 38-1
+
+-- INNER JOIN
+
+1-1
+1-1
+2-2
+2-2
+2-2
+2-2
+4-4
+
+-- LEFT JOIN
+
+1-1
+1-1
+2-2
+2-2
+2-2
+2-2
+4-4
+5-NULL
+NULL-NULL
+NULL-NULL
+
+-- RIGHT JOIN
+
+2-2
+2-2
+1-1
+NULL-3
+4-4
+NULL-NULL
+1-1
+2-2
+2-2
+
+-- FULL JOIN
+
+1-1
+1-1
+2-2
+2-2
+2-2
+2-2
+4-4
+5-NULL
+NULL-NULL
+NULL-NULL
+NULL-3
+NULL-NULL
