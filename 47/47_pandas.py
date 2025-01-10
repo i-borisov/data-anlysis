@@ -1,4 +1,4 @@
-# Задача 47-3
+# Задача 47-3-1
 
 import pandas as pd
 
@@ -18,4 +18,9 @@ stock_2022 = pd[pd['year'] == 2022].groupby(['category', 'subcategory']).agg('su
 new_pd = stock_2022.merge(stock_2023, on=['category', 'subcategory'])
 
 result = new_pd.rename(columns={'stock_x': 'stock_2022', 'stock_y': 'stock_2023'}).drop(['year_x', 'year_y'], axis=1).reset_index()
+
+# Задача 47-3-2
+
+result['percent'] = (100 * (result['stock_2023'] - result['stock_2022']) / result['stock_2022']).round(2)
+
 print(result)
