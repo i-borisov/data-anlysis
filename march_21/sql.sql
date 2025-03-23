@@ -34,3 +34,32 @@ INNER JOIN -- 0/12
 LEFT JOIN -- 3/12
 FULL JOIN -- 4/12
 CROSS JOIN -- 12/12
+
+
+-- ЗАДАЧА 1-4
+
+INNER JOIN tab ON column != 5 -- Да. Джойнить можно по любым условиям.
+
+
+-- ЗАДАЧА 1-5
+
+min/max: LEFT JOIN 5 строк к 10 строкам -- 10/50
+
+
+-- ЗАДАЧА 1-6
+
+min/max: INNER JOIN 10 и 100 строк -- 0/1000
+
+
+-- ЗАДАЧА 1-7
+
+1-1
+1-1
+2-2
+2-2
+3-NULL
+4-NULL
+5-NULL
+7-NULL
+9-9
+NULL-NULL
