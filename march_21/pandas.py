@@ -19,3 +19,8 @@ orders_count = df['product'].values_counts()
 print(orders_count['count'].idxmax())
 
 
+# 5. Найти среднюю цену каждого товара.
+avg_prices = df.groupby('product').agg(avg=('price', 'mean'))
+print(avg_prices)
+
+
