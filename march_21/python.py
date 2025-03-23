@@ -30,3 +30,17 @@ def count_char(s, char):
     return count
 
 print(count_char("hellllllo", "l"))
+
+
+# 4. Удалить все гласные из строки
+
+def remove_vowels(s):
+    vowels = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u']
+    result = []
+
+    for symbol in s:
+      if symbol not in vowels:
+        result.append(symbol)
+    return ''.join(result)
+
+print(remove_vowels("hello"))  # "hll"
