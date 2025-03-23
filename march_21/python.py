@@ -19,6 +19,7 @@ print(is_palindrome("madam"))
 
 
 # 3. Подсчитать количество вхождений символа в строку
+
 def count_char(s, char):
     count = 0
 
