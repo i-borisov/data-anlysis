@@ -13,3 +13,9 @@ print(orders_count)
 # ИЛИ...
 
 orders_count = df['product'].values_counts()
+
+
+# 4. Найти товар с наибольшим количеством заказов.
+print(orders_count['count'].idxmax())
+
+
