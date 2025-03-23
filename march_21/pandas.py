@@ -24,3 +24,7 @@ avg_prices = df.groupby('product').agg(avg=('price', 'mean'))
 print(avg_prices)
 
 
+# 6. Вывести топ-5 самых дорогих товаров по средней цене.
+print(avg_prices.sort_values('avg', ascending=False).head(5))
+
+
