@@ -16,3 +16,16 @@ def is_palindrome(s):
         return False
 
 print(is_palindrome("madam"))
+
+
+# 3. Подсчитать количество вхождений символа в строку
+def count_char(s, char):
+    count = 0
+
+    for symbol in s:
+      if symbol == char:
+        count += 1
+    
+    return count
+
+print(count_char("hellllllo", "l"))
