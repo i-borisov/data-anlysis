@@ -104,3 +104,17 @@ def first_n_chars(s, n):
     return s[:n]
 
 print(first_n_chars("hello", 3))  # "hel"
+
+
+# 9. Сделать первую букву строки заглавной
+def capitalize_first(s):
+    return s.capitalize()
+
+print(capitalize_first("hello"))  # "Hello"
+
+
+# 10. Поменять местами первую и последнюю буквы строки
+def swap_first_last(s):
+  return s[-1] + s[1:-1] + s[0] 
+
+print(swap_first_last("hello"))  # "oellh"
