@@ -118,3 +118,32 @@ def swap_first_last(s):
   return s[-1] + s[1:-1] + s[0] 
 
 print(swap_first_last("hello"))  # "oellh"
+
+
+# 11. Найти сумму элементов списка
+def sum_list(lst):
+    sum = 0
+
+    for element in lst:
+      sum += element
+
+    return sum
+
+print(sum_list([1, 2, 3, 4]))  # 10
+
+
+# 12. Найти максимальный и минимальный элементы списка
+def min_max(lst):
+    minimum = lst[0]
+    maximum = lst[0]
+
+    for element in lst:
+      if element < minimum:
+        minimum = element
+
+      if element > maximum[0]:
+        maximum = element
+
+    return minimum, maximum
+
+print(min_max([1, 2, 3, 4]))  # (1, 4)
