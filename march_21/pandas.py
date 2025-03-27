@@ -69,3 +69,17 @@ print(top_product)
 
 # 15. Найти средний рейтинг товаров.
 print(df.rating.mean())
+
+
+# 16. Определить, какой товар имеет самый высокий средний рейтинг.
+print(df.groupby('product').rating.mean().idxmax())
+
+
+# 17. Определить, какой товар имеет самый низкий средний рейтинг.
+print(df.groupby('product').rating.mean().idxmin())
+
+
+# 18. Найти процент товаров с рейтингом ниже 3.
+percent = 100 * len(df[df['rating'] < 3]) / len(df)
+
+print(percent)
