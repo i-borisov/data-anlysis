@@ -170,3 +170,42 @@ NULL-5
 Без WHERE -- 5/20
 
 С WHERE -- 0/5
+
+
+-- ЗАДАЧА 1-17
+
+LEFT JOIN -- 5
+INNER JOIN -- 4
+CROSS JOIN -- 12
+
+
+-- ЗАДАЧА 1-18
+
+LEFT JOIN -- 5
+INNER JOIN -- 4
+CROSS JOIN -- 12
+
+
+-- ЗАДАЧА 2-1
+
+a
+5
+7
+3
+4
+
+SUM(a) -- 19
+COUNT(a) -- 4
+COUNT(*) -- 4
+COUNT(DISTINCT a) -- 4
+MAX(a) -- 7
+MIN(a) -- 3
+
+
+-- ЗАДАЧА 2-2
+
+1-1
+NULL-1
+
+
+-- ЗАДАЧА 3-1
