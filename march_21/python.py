@@ -175,3 +175,31 @@ def merge_lists(lst1, lst2):
     return list(set(lst1 + lst2))
 
 print(merge_lists([1, 2], [2, 3]))  # [1, 2, 3]
+
+
+
+
+# 17. Вернуть список только с четными числами
+def even_numbers(lst):
+    result = []
+
+    for element in lst:
+      if element % 2 == 0:
+        result.append(element)
+
+    return result
+
+print(even_numbers([1, 2, 3, 4]))  # [2, 4]
+
+
+# 18. Посчитать количество положительных чисел в списке
+def count_positive(lst):
+    count = 0
+
+    for element in lst:
+      if element > 0:
+        count += 1
+
+    return count
+
+print(count_positive([1, -2, 3, 4]))  # 3
