@@ -83,3 +83,68 @@ print(df.groupby('product').rating.mean().idxmin())
 percent = 100 * len(df[df['rating'] < 3]) / len(df)
 
 print(percent)
+
+
+# 19. Определить день недели с наибольшим количеством заказов.
+df['day_of_week'] = df['order_date'].dt.day_name()
+df['order_date_trunc'] = df['order_date'].dt.floor('D')
+
+new_df = df.groupby(['order_date_trunc', 'day_of_week']).order_id.count().reset_index()
+
+max_orders = new_df.order_id.max()
+
+result = new_df['day_of_week'].loc[new_df.order_id == max_orders]
+
+print(result.unique())
+
+
+# 20. Определить, в каком месяце было больше всего заказов.
+df['month'] = df['order_date'].dt.month
+
+print(df.groupby('month').order_id.count().idxmax())
+
+
+# 21. Подсчитать количество заказов по дням недели.
+print(df['day_of_week'].value_counts())
+
+
+# 22. Найти количество заказов по месяцам.
+df['month'].value_counts()
+
+
+# 23. Определить средний рейтинг товаров по категориям.
+df.groupby('category').rating.mean()
+
+
+# 24. Найти топ-3 клиентов с наибольшей суммой заказов.
+df['amount'] = df['price'] * df['quantity']
+df.groupby('customer_name').amount.sum().nlargest(3)
+
+
+# 25. Определить среднее количество товаров в заказе.
+df.quantity.mean()
+
+
+# 26. Найти процент заказов с более чем 3 товарами.
+print(df[df['quantity'] > 3].order_id.count() / df.order_id.count() * 100)
+
+
+# 27. Определить, сколько заказов было сделано за последние 30 дней.
+df[df['order_date'] >= pd.Timestamp.today() - pd.Timedelta(days=30)].order_id.count()
+
+
+# 28. Найти день с наибольшей выручкой.
+df['amount'] = df['price'] * df['quantity']
+df['day'] = df.order_date.dt.floor('D')
+df.groupby('day').amount.sum().idxmax()
+
+
+# 29. Определить месяц с наибольшей выручкой.
+df['amount'] = df['price'] * df['quantity']
+df['month'] = df['order_date'].dt.month
+df.groupby('month').amount.sum().idxmax()
+
+
+# 30. Найти самый популярный товар в каждом месяце.
+most_popular = df.groupby(['month', 'product']).quantity.sum()
+most_popular.groupby(level=0).idxmax()
