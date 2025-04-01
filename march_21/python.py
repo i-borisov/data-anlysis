@@ -115,7 +115,7 @@ print(capitalize_first("hello"))  # "Hello"
 
 # 10. Поменять местами первую и последнюю буквы строки
 def swap_first_last(s):
-  return s[-1] + s[1:-1] + s[0] 
+    return s[-1] + s[1:-1] + s[0]
 
 print(swap_first_last("hello"))  # "oellh"
 
@@ -147,3 +147,31 @@ def min_max(lst):
     return minimum, maximum
 
 print(min_max([1, 2, 3, 4]))  # (1, 4)
+
+
+# 13. Удалить дубликаты из списка
+def remove_duplicates(lst):
+    return list(set(lst))
+
+print(remove_duplicates([1, 2, 3, 3, 4]))  # [1, 2, 3, 4]
+
+
+# 14. Отсортировать список по убыванию
+def sort_desc(lst):
+    return sorted(lst, reverse=True)
+
+print(sort_desc([1, 4, 2, 3]))  # [4, 3, 2, 1]
+
+
+# 15. Перевернуть список
+def reverse_list(lst):
+    return lst[::-1]
+
+print(reverse_list([1, 2, 3, 4]))  # [4, 3, 2, 1]
+
+
+# 16. Объединить два списка без дубликатов
+def merge_lists(lst1, lst2):
+    return list(set(lst1 + lst2))
+
+print(merge_lists([1, 2], [2, 3]))  # [1, 2, 3]
