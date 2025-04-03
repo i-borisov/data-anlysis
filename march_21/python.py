@@ -203,3 +203,84 @@ def count_positive(lst):
     return count
 
 print(count_positive([1, -2, 3, 4]))  # 3
+
+
+# 19. Создать список квадратов чисел
+def square_numbers(lst):
+    result = []
+
+    for element in lst:
+      result.append(element ** 2)
+
+    return result
+
+print(square_numbers([1, 2, 3]))  # [1, 4, 9]
+
+
+# 20. Объединить два списка в список кортежей
+def pair_lists(lst1, lst2):
+
+  result = zip(lst1, lst2)
+  return list(result)
+
+
+print(pair_lists([1, 2], ["a", "b"]))  # [(1, "a"), (2, "b")]
+
+
+# 21. Проверить, является ли строка строкой с уникальными символами
+def has_unique_chars(s):
+    return len(s) == len(set(s))
+
+print(has_unique_chars("abcdef"))  # True
+print(has_unique_chars("aabbcc"))  # False
+
+
+# 22. Найти индекс первого вхождения символа в строке
+def first_occurrence(s, char):
+  for i in range(len(s)):
+    if s[i] == char:
+      return i
+
+print(first_occurrence("hello", "l"))  # 2
+
+
+# 23. Проверить, является ли число простым
+def is_prime(n):
+  if n == 1:
+    return False
+  elif n > 1:
+    for i in range(2, int(n ** 0.5) + 1):
+      if n % i == 0:
+        return False
+
+  return True
+
+print(is_prime(7))  # True
+print(is_prime(4))  # False
+
+
+# 24. Найти количество слов в строке
+def word_count(s):
+    a = s.split()
+    return len(a)
+
+print(word_count("hello world"))  # 2
+
+
+# 25. Найти наибольшее число из двух
+def max_of_two(a, b):
+    if a > b:
+      return a
+    return b
+
+print(max_of_two(3, 5))  # 5
+
+
+# 26. Найти наименьшее число из двух
+def min_of_two(a, b):
+    if a < b:
+      return a
+
+    return b
+
+print(min_of_two(3, 5))  # 3
