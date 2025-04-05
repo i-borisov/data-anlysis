@@ -284,3 +284,19 @@ def min_of_two(a, b):
     return b
 
 print(min_of_two(3, 5))  # 3
+
+
+# 27. Проверить, является ли строка числом
+def is_number(s):
+  return s.isdigit()
+
+
+print(is_number("123"))  # True
+print(is_number("abc"))  # False
+
+
+# 28. Найти длину строки
+def string_length(s):
+    return len(s)
+
+print(string_length("hello"))  # 5
